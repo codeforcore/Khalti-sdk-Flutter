@@ -1,0 +1,23 @@
+name: khalti_sdk_flutter
+description: A new Flutter package project.
+version: 0.0.1
+author: Raj Shah <raj@codeforcore.com>
+homepage: https://github.com/codeforcore/Khalti-sdk-Flutter
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^7.0.0
+  http: ^0.13.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  assets:
+    - images/logo.png
+ 
