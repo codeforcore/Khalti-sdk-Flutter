@@ -10,7 +10,7 @@ import 'ebanking_page.dart';
 class KhaltiPaymentPage extends StatelessWidget {
   final KhaltiConfig config;
 
-  const KhaltiPaymentPage({Key? key, required this.config}) : super(key: key);
+  const KhaltiPaymentPage({Key key, @required this.config}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -27,7 +27,7 @@ class KhaltiPaymentChild extends StatefulWidget {
 
 class _KhaltiPaymentChildState extends State<KhaltiPaymentChild> {
   // int _tabIndex = 0;
-  OverlayEntry? _overlayEntry;
+  OverlayEntry _overlayEntry;
   @override
   void initState() {
     _overlayEntry = OverlayEntry(
@@ -71,9 +71,9 @@ class _KhaltiPaymentChildState extends State<KhaltiPaymentChild> {
     return BlocListener<KhaltiPaymentCubit, KhaltiPaymentState>(
       listener: (context, state) {
         if (state is PaymenLoading) {
-          Overlay.of(context)?.insert(_overlayEntry!);
+          Overlay.of(context)?.insert(_overlayEntry);
         } else {
-          if (_overlayEntry!.mounted) _overlayEntry?.remove();
+          if (_overlayEntry.mounted) _overlayEntry?.remove();
           if (state is OtpVerificationFailed) {
             showSnakBar(context, state.msg);
           } else if (state is OtpSendError) {

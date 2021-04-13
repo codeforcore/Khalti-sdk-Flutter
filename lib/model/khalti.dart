@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
+
 class KhaltiBanks {
   final String idx;
   final String name;
@@ -11,15 +13,15 @@ class KhaltiBanks {
   final bool hasMobileBanking;
   final bool hasMobileCheckout;
   KhaltiBanks({
-    required this.idx,
-    required this.name,
-    required this.shortName,
-    required this.logo,
-    required this.swiftCode,
-    required this.hasCardpayment,
-    required this.hasEbanking,
-    required this.hasMobileBanking,
-    required this.hasMobileCheckout,
+    @required this.idx,
+    @required this.name,
+    @required this.shortName,
+    @required this.logo,
+    @required this.swiftCode,
+    @required this.hasCardpayment,
+    @required this.hasEbanking,
+    @required this.hasMobileBanking,
+    @required this.hasMobileCheckout,
   });
 
   Map<String, dynamic> toMap() {
@@ -66,7 +68,7 @@ class KhaltiResponse {
   final bool sucess;
 
   /// Token null if sucess is false
-  final String? token;
+  final String token;
 
   /// Message
   final String message;
@@ -84,7 +86,7 @@ class KhaltiConfig {
   final String publicKey;
 
   /// Users Mobile Number for payment (optional)
-  String? mobile;
+  String mobile;
 
   /// Amount must be in paisa and greater than equal to 1000 i.e Rs 10
   int amount;
@@ -96,14 +98,14 @@ class KhaltiConfig {
   String productName;
 
   /// Product URL
-  String? productUrl;
+  String productUrl;
 
   KhaltiConfig({
-    required this.publicKey,
+    @required this.publicKey,
     this.mobile,
-    required this.amount,
-    required this.productIdentity,
-    required this.productName,
+    @required this.amount,
+    @required this.productIdentity,
+    @required this.productName,
     this.productUrl,
   });
 

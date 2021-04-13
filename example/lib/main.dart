@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:khalti_sdk_flutter/khalti.dart';
-import 'package:khalti_sdk_flutter/model/khalti.dart';
 
 void main() => runApp(MyApp());
 

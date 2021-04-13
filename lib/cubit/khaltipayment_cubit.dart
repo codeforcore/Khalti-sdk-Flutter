@@ -13,9 +13,9 @@ class KhaltiPaymentCubit extends Cubit<KhaltiPaymentState> {
   ) : super(KhaltiPaymentInitial());
   final KhaltiConfig config;
 
-  String? pin;
-  String? otp;
-  String? token;
+  String pin;
+  String otp;
+  String token;
   int tabIndex = 0;
   bool isBusy = false;
 

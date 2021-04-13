@@ -56,7 +56,7 @@ class WalletPayment extends StatelessWidget {
                     child: MaterialButton(
                       padding: const EdgeInsets.all(15),
                       onPressed: () {
-                        if (_formkey.currentState!.validate())
+                        if (_formkey.currentState.validate())
                           cubit.confirmOtp();
                       },
                       color: primaryColor,
@@ -153,7 +153,7 @@ class WalletPayment extends StatelessWidget {
                   child: MaterialButton(
                     padding: const EdgeInsets.all(15),
                     onPressed: () {
-                      if (_formkey.currentState!.validate())
+                      if (_formkey.currentState.validate())
                         cubit.processWalletPayment();
                     },
                     color: primaryColor,
