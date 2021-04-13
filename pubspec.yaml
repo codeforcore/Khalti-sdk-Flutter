@@ -5,14 +5,14 @@ author: Raj Shah <raj@codeforcore.com>
 homepage: https://github.com/codeforcore/Khalti-sdk-Flutter
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.0.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_bloc: ^7.0.0
-  http: ^0.13.1
+  flutter_bloc: any
+  http: any
 
 dev_dependencies:
   flutter_test:
