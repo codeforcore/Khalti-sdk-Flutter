@@ -12,7 +12,7 @@ class OtpSent extends KhaltiPaymentState {}
 class OtpVerified extends KhaltiPaymentState {
   final KhaltiResponse response;
   OtpVerified({
-    required this.response,
+    @required this.response,
   });
 }
 
@@ -20,14 +20,14 @@ class OtpVerificationFailed extends KhaltiPaymentState {
   final String msg;
 
   OtpVerificationFailed({
-    required this.msg,
+    @required this.msg,
   });
 }
 
 class OtpSendError extends KhaltiPaymentState {
   final String msg;
   OtpSendError({
-    required this.msg,
+    @required this.msg,
   });
 }
 
